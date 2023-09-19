@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Ubuntu:wght@300;400;500&display=swap');
+
+*{
+    font-family: 'Jost', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+   
+}
+
+.form-style-div{
+    background-color: rgb(192, 192, 192);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+    margin-top: 10%;
+}
+body{
+    background-color: rgba(206, 154, 255, 0.253);
+    justify-content: center;
+    display: flex;
+}
