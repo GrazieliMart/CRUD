@@ -1,7 +1,10 @@
 <?php
 echo'<div class="form-style-div">
-<form action=""><h1>Cadastro de Livros</h1>
-
+<form action="">
+<div class="div-h1">
+<h1> 🌻 &#5792; Library 🌻</h1>
+<br>
+</div>
 <div class="style-form">
 <i class="bi bi-book-half"></i>
 <input type="text" placeholder="Title" require name="title">
@@ -24,14 +27,14 @@ echo'<div class="form-style-div">
 </div>
 
 <div class="style-form">
-Foto
+<h2>Picture</h2><br><br>
 <input type="file" name="foto" accept="image/gif, image/png, image/jpg, image/jpeg"><br><br>
 </div>
 
 
-
-<input type="submit" value="Cadastrar">
-
+<div class="formatic-div">
+<input type="submit" value="register" class="btn-form">
+</div>
 
 </form>
 </div>';
