@@ -5,7 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleconsulta1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <title>CRUD | Banco de dados</title>
+    <style>
+        
+.link3{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    margin-left:120px;
+ }
+.link3 a{
+    color: #fff;
+    text-decoration: none;
+}
+.link3 a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+    </style>
 </head>
 <body>
     
@@ -26,12 +45,16 @@
 <i class="bi bi-upc"></i>
 <input type="number" placeholder="Code" require name="code">
 </div>
-
+<br>
 <div class="formatic-div">
 <input type="submit" value="send" class="btn-form">
+
+
 </div>
-
-
+<br>
+<div class="link3">
+<a href="index.php"><i class="bi bi-house"></i>Back</a>
+</div>
 </div>
 </form>
 </div>
@@ -50,7 +73,7 @@
              $stmt = consultar();
 
              echo "
-            
+            <br>
               <div class='tabela'>
              <form method='post' >
              

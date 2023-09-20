@@ -1,3 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #sucess{
+    color: #fff;
+    font-size: 20px;
+}
+#error{
+    color: #fff;
+    font-size: 20px;
+}
+  
+#select{
+    color: #fff;
+    font-size: 40px;
+   
+    
+}
+
+
+
+.link{
+    text-align: center;
+    display:flex;
+    padding-top:20px;
+    margin-left:90px; 
+}
+.link a{
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    display:flex;
+    position: absolute;
+}
+.link a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+    </style>
+    <title></title>
+</head>
+<body>
+    
+</body>
+</html>
+
 <?php
 
     function conectarBD() 
@@ -48,9 +97,9 @@
                 $stmt->bindParam(':foto', $fotoBinario);
                 $stmt->execute();
 
-                echo "<span id='sucess'>Sucess!</span>";
+                echo "<div class='aviso'><span id='sucess'>​😸​Sucess!​😸​</span></div>";
             } else {
-                echo "<span id='error'>This title already exist!</span>";
+                echo "<div class='aviso'><span id='error'>😽​This title already exist!😽​</span></div>";
             }
 
         } catch(PDOException $e) {
@@ -109,7 +158,7 @@
             $stmt->bindParam(':foto', $newfoto);
             $stmt->execute();
 
-            echo "The book code $code have been changed!";
+            echo "<div class='aviso'>The book code $code have been changed!</div>";
 
         } catch (PDOException $e) {
             echo 'Error: ' . $e->getMessage();
@@ -125,7 +174,11 @@
             $stmt->bindParam(':code', $code);
             $stmt->execute();
 
-            echo $stmt->rowCount() . "  Book of $code code removed!";
+            echo $stmt->rowCount() . " <div class='aviso'><span id='select'>😼​Sucess😼​​</span>
+            <div class='link'>
+        <a href='index.php'><i class='bi bi-house'></i>Back</a>
+        </div>
+        </div>";
 
         } catch (PDOException $e) {
             echo 'Error: ' . $e->getMessage();
