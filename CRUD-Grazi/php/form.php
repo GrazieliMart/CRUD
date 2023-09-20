@@ -1,10 +1,19 @@
 <?php
-echo'<div class="form-style-div">
+echo'
+<div class="form-style-div">
 <form action="">
 <div class="div-h1">
-<h1> 🌻 &#5792; Library 🌻</h1>
+<h1> &#5792; Library </h1>
+
+<div class="div-image">
+<img src="cat.png" alt="">
+</div>
 <br>
 </div>
+
+
+
+<div class="teste">
 <div class="style-form">
 <i class="bi bi-book-half"></i>
 <input type="text" placeholder="Title" require name="title">
@@ -25,7 +34,7 @@ echo'<div class="form-style-div">
 <i class="bi bi-upc"></i>
 <input type="number" placeholder="Code" require name="code">
 </div>
-
+</div>
 <div class="style-form">
 <h2>Picture</h2><br><br>
 <input type="file" name="foto" accept="image/gif, image/png, image/jpg, image/jpeg"><br><br>

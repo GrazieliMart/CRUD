@@ -13,6 +13,24 @@
 <?php
 include 'form.php';
 ?>
+    </body>
 
-</body>
 </html>
+
+<?php
+   include("bd.php");
+
+    if ($_SERVER["REQUEST_METHOD"] === 'POST') {
+        //inserindo dados
+        $title = $_POST["title"];
+        $subtitle = $_POST["subtitle"];
+        $gender = $_POST["gender"];
+        $code = $_POST["code"];
+
+        if ((trim($code) == "") || (trim($title) == "")) {
+            echo "<span id='warning'>Code and Title are required!</span>";
+        } else {
+            cadastrar($title, $subtitle, $gender, $code, $foto);
+        }
+    }
+?>
