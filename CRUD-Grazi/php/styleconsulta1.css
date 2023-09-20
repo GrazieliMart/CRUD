@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Ubuntu:wght@300;400;500&display=swap');
+
+*{
+    font-family: 'Jost', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+   
+}
+.tabela{
+    color: #fff;
+   
+    position: absolute;
+    margin-top:28%;
+
+}
+.tabela th{
+    color: rgb(30, 30, 137);
+
+    background-color: rgba(255, 255, 255, 0.68);
+}
+.btndiv{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.btndiv button{
+    width: 80px;
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.273);
+    border: white solid 2px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btndiv button:hover{
+    width: 80px;
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 10px;
+    background: white;
+    border: white solid 2px;
+    color: rgb(12, 0, 92);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.tabela td{
+border: rgba(255, 255, 255, 0.368) solid 1px;
+padding: 5px;
+backdrop-filter: blur(5px);
+justify-content: space-between;
+border-radius: 5px; 
+font-size: 20px;
+
+}
+.tabela table{
+    border: none;
+}
+.form-style-div{
+    background-color: rgba(192, 192, 192, 0.589);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+    margin-top: 5%;
+    border: #ffffffa9 solid 5px;
+    border-radius: 40px;
+    padding: 20px;
+  
+   
+    align-items: center;
+    text-align: center;
+   
+
+}
+.div-image{
+   display: flex;
+   
+   
+            align-items: center;
+justify-content: center;
+margin: auto;
+   margin-top: 10px;
+ 
+   
+}
+.teste{
+    
+    margin-left: 120px;
+}
+.div-image img{
+    height: 150px;
+   width: 150px;
+   margin-right: 10px;
+   
+}
+.div-h1{
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+.style-form h2{
+    margin: 15px;
+}
+.style-form{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 0px;
+   
+}
+.style-form input{
+    border:#fff solid 2px;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin: 5px;
+    color: rgb(46, 38, 38);
+    background: transparent;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.style-form input:hover{
+    border:#ffffff00 solid 2px;
+    background-color: #ffffff4f;
+    transition: 0.3s;
+   
+}
+.style-form input::placeholder{
+    color: rgb(255, 255, 255);
+}
+.formatic-div{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.btn-form{
+font-size: 20px;
+padding: 10px;
+border-radius: 15px;
+background-color: rgb(244, 234, 255);
+font-weight: bold;
+color: rgb(65, 65, 65);
+  transition: 0.2s;
+border: none;
+
+}
+.btn-form:hover{
+    transition: 0.2s;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px rgb(154, 46, 255);
+    cursor: pointer;
+    
+    }
+body{  animation: color 20s infinite linear; 
+    justify-content: center;
+    display: flex;
+}
+@keyframes color {
+    0%   { background: #4a0086b4; }
+    20%  { background: #3a0086d7; }
+    40%  { background: #641797d8; }
+    60%  { background: #5419b4d0; }
+    80%  { background: #6830c2d2; }
+    100% { background: #5b0086c7; }
+  }

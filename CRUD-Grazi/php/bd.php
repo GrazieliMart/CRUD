@@ -3,9 +3,25 @@
     function conectarBD() 
     //FEITO
     {
-        $pdo = new PDO("mysql:host=143.106.241.3;dbname=cl201287;charset=utf8", "root", "");
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        try {
+        
+            $db = 'mysql:host=143.106.241.3;dbname=cl201287;charset=utf8';
+            $user = 'cl201287';
+            $passwd = 'cl*17082005';
+            $pdo = new PDO($db, $user, $passwd);
+    
+           
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+        } catch (PDOException $e) {
+            $output = 'Impossível conectar BD : ' . $e . '<br>';
+            echo $output;
+        }
         return $pdo;
+    
+       /* $pdo = new PDO("mysql:host=143.106.241.3;dbname=cl201287;charset=utf8", "root", "");
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        return $pdo;*/
     }
 
     function cadastrar($title, $subtitle, $gender,$code,$foto) 
@@ -13,14 +29,14 @@
     {
         try {
             $pdo = conectarBD();
-            $rows = verificarCadastro($ra, $pdo);
+            $rows = verificarCadastro($code, $pdo);
 
             if ($rows <= 0) {
 
-                if ($nomeFoto == "") {
+                if ($foto == "") {
                     $fotoBinario = null;
                 } else {
-                    // Lendo o conteudo do arq para uma var
+                   
                     $fotoBinario = file_get_contents($foto['tmp_name']);
                 }
 
@@ -43,7 +59,7 @@
     }
 
 
-    function verificarCadastro($ra, $pdo) 
+    function verificarCadastro($code, $pdo) 
     //FEITO
     {
         //verificando se o RA informado já existe no BD para não dar exception
@@ -60,7 +76,7 @@
     {
         $pdo = conectarBD();
         if (isset($_POST["code"]) && ($_POST["code"] != "")) {
-            $ra = $_POST["code"];
+            $code = $_POST["code"];
             $stmt = $pdo->prepare("select * from biblioteca where code= :code order by title, subtitle");
             $stmt->bindParam(':code', $code);
         } else {
@@ -72,8 +88,7 @@
         return $stmt;
     }
 
-    function buscarEdicao($ra)
-    //FEITO
+    function buscarEdicao($code)
      {
         $pdo = conectarBD();
         $stmt = $pdo->prepare('select * from biblioteca where code = :code');
@@ -82,23 +97,26 @@
         return $stmt;
     }
 
-    function alterar($ra, $novoNome, $novoCurso) {
+    function alterar($newtitle, $newsubtitle, $newgender, $code, $newfoto) {
         try {
             $pdo = conectarBD();
-            $stmt = $pdo->prepare('UPDATE alunos SET nome = :novoNome, curso = :novoCurso WHERE ra = :ra');
-            $stmt->bindParam(':novoNome', $novoNome);
-            $stmt->bindParam(':novoCurso', $novoCurso);
-            $stmt->bindParam(':ra', $ra);
+            $stmt = $pdo->prepare('UPDATE
+             biblioteca SET title = :newtitle, subtitle = :newsubtitle, gender = :newgender, foto = :newfoto WHERE code = :code');
+            $stmt->bindParam(':title', $newtitle);
+            $stmt->bindParam(':subtitle', $newsubtitle);
+            $stmt->bindParam(':gender', $newgender);
+            $stmt->bindParam(':code', $code);
+            $stmt->bindParam(':foto', $newfoto);
             $stmt->execute();
 
-            echo "Os dados do aluno de RA $ra foram alterados!";
+            echo "The book code $code have been changed!";
 
         } catch (PDOException $e) {
             echo 'Error: ' . $e->getMessage();
         }
     }
 
-    function excluir($ra)
+    function excluir($code)
     //FEITO 
     {
         try {
@@ -107,7 +125,7 @@
             $stmt->bindParam(':code', $code);
             $stmt->execute();
 
-            echo $stmt->rowCount() . "  Book of $ra code removed!";
+            echo $stmt->rowCount() . "  Book of $code code removed!";
 
         } catch (PDOException $e) {
             echo 'Error: ' . $e->getMessage();
