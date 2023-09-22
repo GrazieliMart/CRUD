@@ -35,7 +35,7 @@
 
 <div class="style-form">
 <i class="bi bi-bookmarks"></i>
-<input type="text" placeholder="Subtitle" require name="subtitle">
+<input type="text" placeholder="Autor" require name="subtitle">
 </div>
 
 <div class="style-form">

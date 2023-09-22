@@ -101,10 +101,11 @@ font-family: 'Ubuntu', sans-serif;
    
 }
 .style-form1{
-    align-items: left;
-    justify-content: left;
-    display: flex;
+   
+    justify-content: center;
     margin-top: 0px;
+    position: absolute;
+    margin-left: 20px;
    
 }
 .style-form input{
@@ -135,6 +136,7 @@ font-family: 'Ubuntu', sans-serif;
     background: transparent;
     font-size: 20px;
     transition: 0.3s;
+    margin-left: 20px;
 }
 .style-form1 input:hover{
     border:#ffffff00 solid 2px;

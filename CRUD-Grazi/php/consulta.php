@@ -14,7 +14,7 @@
     align-items: center;
     text-align: center;
     
-    margin-left:120px;
+    margin-left:130px;
  }
 .link3 a{
     color: #fff;
@@ -82,7 +82,7 @@
              echo "<tr><th></th>
              <th>Code</th>
              <th>Title</th>
-             <th>Subtitle</th>
+             <th>Autor</th>
              <th>Gender</th>
              <th>Foto</th>
              

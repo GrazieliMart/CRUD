@@ -15,7 +15,14 @@
     
 }
 
+.style-form1{
+   
+   justify-content: center;
+   margin-top: 0px;
 
+   margin-left: 0px;
+  
+}
 .aviso{
     align-items: center;
     position: absolute; 
@@ -33,6 +40,7 @@
     text-decoration: none;
     text-align: center;
     display:flex;
+    margin-left:50px;
     position: absolute;
 }
 .link a:hover{
