@@ -154,6 +154,11 @@ margin: auto;
     display: flex;
     justify-content: center;
 }
+.formatic-div1{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 .btn-form{
 font-size: 20px;
 padding: 10px;

@@ -35,7 +35,7 @@
 
 <div class="style-form">
 <i class="bi bi-bookmarks"></i>
-<input type="text" placeholder="Autor" require name="subtitle">
+<input type="text" placeholder="Author" require name="subtitle">
 </div>
 
 <div class="style-form">
@@ -60,9 +60,13 @@
 <a href="consulta.php"><input type="button" value="search"  class="btn-form"></a>
 
 </div>
-
-</form>
+<br>
+<div class="link3">
+<a href="links.php" style="color: white;text-decoration:none;"><i class="bi bi-house" style="color:white;"></i>Links Csv</a>
+<br><br>
+<a href="Resenha.php" style="color: white;text-decoration:none; margin-left:10px;"><i class="bi bi-book-half"></i>Reviews</a>
 </div>
+</form>
 
     </body>
 

@@ -15,13 +15,10 @@
     
 }
 
-.style-form1{
-   
-   justify-content: center;
-   margin-top: 0px;
-
-   margin-left: 0px;
-  
+.style-form1 {
+    justify-content: center;
+    margin-top: -38px;
+    margin-left: 0px;
 }
 .aviso{
     align-items: center;
@@ -70,10 +67,12 @@
     padding: 5px;
     position: relative;margin:10px;
 }
-.div-h1-1 h1{
-    display:flex;
-    margin-left:-90px;
-    
+.div-h1-1 h1 {
+    display: flex;
+    margin-left: -262px;
+}
+.formEdit{
+    margin-top:10px;
 }
 </style>
 <body>
@@ -105,7 +104,7 @@ if (isset($_POST['code'])) {
             <div class='div-image1'>
             <img src='catandbook.png' alt=''>
             </div>
-            <form method='post' action='altera.php' enctype='multipart/form-data'>
+            <form method='post' class='formEdit' action='altera.php' enctype='multipart/form-data'>
             <div class='div-h1-1'>
             <h1> &#5792; Library - Edit</h1></div>";
             echo "<div class='style-form1'>
@@ -122,7 +121,7 @@ if (isset($_POST['code'])) {
             
             echo "<div class='style-form'><input type='file' name='newfoto'><br><br>";
             echo "<input type='hidden' name='code' value='$code'></div>";
-            echo "<br>";
+           
           
             echo '
             <br><input type="submit" value="Save" class="btn-form">';

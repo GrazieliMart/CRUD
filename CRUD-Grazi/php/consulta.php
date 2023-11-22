@@ -47,16 +47,20 @@
 </div>
 <br>
 <div class="formatic-div">
-<input type="submit" value="send" class="btn-form">
+<input type="submit" value="send" class="btn-form"><br>
 
+</div><br>
 
-</div>
 <br>
 <div class="link3">
 <a href="index.php"><i class="bi bi-house"></i>Back</a>
+</div></form>
+
+
 </div>
 </div>
-</form>
+
+
 </div>
 
 
